@@ -779,6 +779,591 @@ public void comprarAlgo() {
 				System.out.println("Tu dinero total es: $" + dinero);
 			}
 		}
-
+		else if (i == 2) {
+			if (n2 <= 0) {
+					NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n2) {
+						System.out.println("Usted posee " + n2 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n2 = n2 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==3) {
+			if(n3<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n3) {
+						System.out.println("Usted posee " + n3 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n3 = n3 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==4) {
+			if(n4<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n4) {
+						System.out.println("Usted posee " + n4 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n4 = n4 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==5) {
+			if(n5<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n5) {
+						System.out.println("Usted posee " + n5 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n5 = n5 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==6) {
+			if(n6<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n6) {
+						System.out.println("Usted posee " + n6 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n6 = n6 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==7) {
+			if(n7<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n7) {
+						System.out.println("Usted posee " + n7 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n7 = n7 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==8) {
+			if(n8<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n8) {
+						System.out.println("Usted posee " + n8 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n8 = n8 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==9) {
+			if(n9<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n9) {
+						System.out.println("Usted posee " + n9 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n9 = n9 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==10) {
+			if(n10<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n10) {
+						System.out.println("Usted posee " + n10 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n10 = n10 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==11) {
+			if(n11<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n11) {
+						System.out.println("Usted posee " + n11 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n11 = n11 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==12) {
+			if(n12<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n12) {
+						System.out.println("Usted posee " + n12 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n12 = n12 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==13) {
+			if(n13<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n13) {
+						System.out.println("Usted posee " + n13 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n13 = n13 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==14) {
+			if(n14<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n14) {
+						System.out.println("Usted posee " + n14 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n14 = n14 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==15) {
+			if(n15<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n15) {
+						System.out.println("Usted posee " + n15 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n15 = n15 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==16) {
+			if(n16<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n16) {
+						System.out.println("Usted posee " + n16 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n16 = n16 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==17) {
+			if(n17<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n17) {
+						System.out.println("Usted posee " + n17 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n17 = n17 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==18) {
+			if(n18<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n18) {
+						System.out.println("Usted posee " + n18 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n18 = n18 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==19) {
+			if(n19<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n19) {
+						System.out.println("Usted posee " + n19 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n19 = n19 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==20) {
+			if(n20<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n20) {
+						System.out.println("Usted posee " + n20 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n20 = n20 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==21) {
+			if(n21<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n21) {
+						System.out.println("Usted posee " + n21 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n21 = n21 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==22) {
+			if(n22<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n22) {
+						System.out.println("Usted posee " + n22 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n22 = n22 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		else if(i==23) {
+			if(n23<=0) {
+				NoCel();
+			}
+			else {
+				do {
+					cantidad = cantidad();
+					if (cantidad > n23) {
+						System.out.println("Usted posee " + n23 + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n23 = n23 - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+		int q = 0;
+		salir = true;
+		System.out.println();
+		do {
+			try {
+				System.out.println("Qué desea hacer?");
+				System.out.println("1. Vender");
+				System.out.println("2. Depositar");
+				System.out.println("3. Comprar celulares");
+				System.out.println("3. Mostrar ganancias");
+				System.out.print("Respuesta: ");
+				q = lector.nextInt();
+				if (q <= 0 || q > 4) {
+					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
+					System.out.println();
+				} else {
+					salir = false;
+				}
+			} catch(InputMismatchException ex) {
+				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
+				System.out.println();
+				lector.next();
+			}
+		} while (salir);
+		if(q==1) {
+			vender();
+		}
+		else if(q==3) {
+			comprarAlgo();
+		}
+		else if(q==2) {
+			depositar();
+		} else if (q==4) {
+			MostrarGanancias();
+		}
+	}
+	public void NoCel() {
+		int q = 0;
+		salir = true;
+		System.out.println();
+		System.out.println("No tienes ese celular en el inventario, te recomendamos que veas de nuevo tu inventario");
+		do {
+			try {
+				System.out.println("Qué desea hacer?");
+				System.out.println("1. Vender");
+				System.out.println("2. Depositar");
+				System.out.println("3. Comprar celulares");
+				System.out.println("3. Mostrar ganancias");
+				System.out.print("Respuesta: ");
+				q = lector.nextInt();
+				if (q <= 0 || q > 4) {
+					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
+					System.out.println();
+				} else {
+					salir = false;
+				}
+			} catch(InputMismatchException ex) {
+				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
+				System.out.println();
+				lector.next();
+			}
+		} while (salir);
+		if(q==1) {
+			vender();
+		}else if(q==2) {
+			depositar();
+		}else if(q==3) {
+			comprarAlgo();
+		}
+		else if(q==4) {
+			MostrarGanancias();
+		}
+	}
+	public void MostrarGanancias() {
+		System.out.println();
+		System.out.println("Tienes una ganancia de: $"+ganado);
+	}
+	public void PrecioVenta() {
+		System.out.print("A cuanto lo quieres vender? $");
+		PrecioVenta=lector.nextDouble();
+	}
+	public int cantidad() {
+		int cantidad = 0;
+		salir = true;
+		System.out.println();
+		do {
+			try {
+				System.out.print("Cuántos celulares desea vender? ");
+				cantidad = lector.nextInt();
+				if (cantidad < 0) {
+					System.out.println("Respuesta incorrecta, el número debe de ser mayor a 0");
+					System.out.println();
+				} else {
+					salir = false;
+				}
+			} catch (InputMismatchException ex) {
+				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
+				System.out.println();
+				lector.next();
+			}
+		} while (salir);
+		return cantidad;
 	}
 }
