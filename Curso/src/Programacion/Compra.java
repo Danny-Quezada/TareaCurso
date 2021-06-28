@@ -232,7 +232,7 @@ public void comprarAlgo() {
 		do {
 			try {
 				System.out.println("--------------");
-				System.out.println("Ha escodigo LG");
+				System.out.println("Ha escogido LG");
 				System.out.println("--------------");
 				String LG[][]= {{"1. LG V60", "$900"},
 				{"2. LG V50", "$800"},{"3. LG V40","$720"},{"4. LG G8", "$400"},{"5. LG G7","$300"},{"6. LG G6", "$240"}
@@ -662,5 +662,123 @@ public void comprarAlgo() {
 		else if(i==3) {
 			vender();
 		}
+	}
+	public void vender() {
+		int i = 0, cantidad;
+		salir = true;
+		System.out.println();
+		System.out.println("--------------------------");
+		System.out.println("        Inventario        ");
+		System.out.println("--------------------------");
+		if(n>0) {
+		System.out.println("1. Samsung Galaxy 21S: "+n);
+		}
+		if(n2>0) {
+		System.out.println("2. Samsung Galaxy S20: "+n2);
+		}
+		if(n3>0) {
+			System.out.println("3. Samsung Galaxy Fold: "+n3);
+		}
+		if(n4>0) {
+			System.out.println("4. Samsung Galaxy Fold 2: "+n4);
+		}
+		if(n5>0) {
+			System.out.println("5. Samsung s10: "+n5);
+		}
+		if(n6>0) {
+			System.out.println("6. Samsung s9 plus: "+n6);
+		}
+		if(n7>0) {
+			System.out.println("7. iPhone 12 pro max: "+n7);
+		}
+		if(n8>0) {
+			System.out.println("8. iphone 11 pro: "+n8);
+		}
+		if(n9>0) {
+			System.out.println("9. iphone 8 plus: "+n9);
+		}
+		if(n10>0) {
+			System.out.println("10. Iphone 7 plus: "+n10);
+		}
+		if(n11>0) {
+			System.out.println("11. Iphone 6 plus: "+n11);
+		}
+		if(n12>0) {
+			System.out.println("12. LG V60: "+n12);
+		}
+		if(n13>0) {
+			System.out.println("13. LG V50: "+n13);
+		}
+		if(n14>0) {
+			System.out.println("14. LG V40: "+n14);
+		}
+		if(n15>0) {
+			System.out.println("15. LG G8: "+n15);
+		}
+		if(n16>0) {
+			System.out.println("16. LG G7: "+n16);
+		}
+		if(n17>0) {
+			System.out.println("17. LG G6: "+n17);
+		}
+		if(n18>0) {
+			System.out.println("18. Huawei nova 5: "+n18);
+		}
+		if(n19>0) {
+			System.out.println("19. Huawei Mate 30 pro: "+n19);
+		}
+		if(n20>0) {
+			System.out.println("20. Huawei Mate 30: "+n20);
+		}
+		if(n21>0) {
+			System.out.println("21. Huawei Y9: "+n21);
+		}
+		if(n22>0) {
+			System.out.println("22. Huawei P20: "+n22);
+		}
+		if(n23>0) {
+			System.out.println("23. Huawei enjoy 10: "+n23);
+		}
+		System.out.println();
+		do {
+			try {
+				System.out.println("Que quieres vender? (Debe de introducir el número que le corresponde a cada articulo)");
+				System.out.print("Respuesta: ");
+				i=lector.nextInt();
+				if (i <= 0 || i > 23) {
+					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
+					System.out.println();
+				} else {
+					salir = false;
+				}
+			} catch (InputMismatchException ex) {
+				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
+				System.out.println();
+				lector.next();
+			}
+		} while (salir);
+		if(i==1) {
+			if(n<=0) {
+				NoCel();
+			}
+			else { 
+				do {
+					cantidad = cantidad();
+					if (cantidad > n) {
+						System.out.println("Usted posee " + n + " celulares, no puede retirar " + cantidad);
+						salir = true;
+					} else {
+						salir = false;
+					}
+				} while (salir);
+				n = n - cantidad;
+				PrecioVenta();
+				dinero = dinero + (PrecioVenta * cantidad);
+				ganado = ganado + (PrecioVenta * cantidad);
+				System.out.println("El dinero ganado por ventas es: $"+ganado);
+				System.out.println("Tu dinero total es: $" + dinero);
+			}
+		}
+
 	}
 }
