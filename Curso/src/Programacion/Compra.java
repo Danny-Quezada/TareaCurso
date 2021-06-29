@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Compra {
-
+	
 	static Scanner lector= new Scanner(System.in);
 	private double precio;
 	private double PrecioVenta;
@@ -26,8 +26,19 @@ public class Compra {
 	//Y por ultimo, estas variables son contadores de los celulares que vamos comprando(Depende del modelo)
 	private int n,n2,n3,n4,n5,n6, n7, n8, n9, n10, n11,n12,n13,n14,n15,n16, n17, n18, n19, n20, n21, n22, n23;
 	
+	/*Se agrego un método constructor de la clase, para que se le muestre al usuario al iniciar el programa
+	 * Se agrego un método donde se contiene el menú deopciones para que el usuario no este limitado a realizar algunas opciones
+	 * Y un cambio menor en el inventario, en donde se muestra también el dinero que posee y las ganancias obtenidas
+	 * Tenemos que solucionar el error de salida que te comente
+	*/
+	public Compra(){
+		System.out.println("--------------------------------");
+		System.out.println("    Bienvenido a nuestra app    ");
+		System.out.println("--------------------------------");
+		System.out.println("La funcionalidad de esta aplicación es para que puedas tener un control de tus ventas y compras de celulares \nTambién puedes hacer una visualización de tu inventario y la ganancia que has tenido con las ventas \nEspero que le sea de utilidad la app");
+		System.out.println();
+	}
 	public void PedirDinero() {
-		int i = 0;
 		do {
 			try {
 				System.out.print("Cuanto dinero tienes? $"); 
@@ -46,31 +57,7 @@ public class Compra {
 		} while (salir);
 		salir = true;
 		System.out.println();
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Comprar celulares");
-				System.out.println("2. Depositar más dinero");
-				System.out.print("Respuesta: ");
-				i = lector.nextInt();
-				if (i <= 0 || i > 2) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch (InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(i==1) {
-			comprarAlgo();
-		}
-		else if(i==2) {
-			depositar();
-		}
+		Menu();
 	}
 public void comprarAlgo() {
 		
@@ -434,39 +421,10 @@ public void comprarAlgo() {
 			NotienesusficienteDinero();
 		}
 		System.out.println();
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Comprar");
-				System.out.println("2. Depositar más dinero");
-				System.out.println("3. Ver inventario");
-				System.out.print("Respuesta: ");
-				a = lector.nextInt();
-				if (a <= 0 || a > 3) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch (InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(a==1) {
-			comprarAlgo();
-		}
-		else if(a==2) {
-			depositar();
-		}
-		else if(a==3) {
-			inventario();
-		}
+		Menu();
 	}
 	public void depositar() {
 		double i = 0;
-		int o = 0;
 		salir = true;
 		System.out.println();
 		do {
@@ -489,75 +447,19 @@ public void comprarAlgo() {
 		dinero=i+dinero;
 		System.out.println("Tienes de dinero $"+dinero);
 		System.out.println();
-		do {
-			try {
-				System.out.println("Qué desea hacer?" );
-				System.out.println("1. Comprar");
-				System.out.println("2. Depositar");
-				System.out.println("3. Vender");
-				System.out.print("Respuesta: ");
-				o=lector.nextInt(); 
-				if (o <= 0 || o > 3) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch (InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(o==1) {
-			comprarAlgo();
-		}
-		else if(o==2) {
-			depositar();
-		}else if(o==3) {
-			vender();
-		}
+		Menu();
 	}
 
 	public void NotienesusficienteDinero() {
-		int o = 0;
 		salir = true;
 		System.out.println();
 		System.out.println("Lo siento, sobrepasaste tu dinero");
 		System.out.println("Tienes de dinero: $"+dinero);
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Depositar");
-				System.out.println("2. Ver inventario");
-				System.out.println("3. Ver otros celulares");
-				System.out.print("Respuesta: ");
-				o=lector.nextInt(); 
-				if (o <= 0 || o > 3) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch (InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(o==1) {
-		depositar();	
-		}
-		else if(o==2) {
-			inventario();
-		}
-		else if(o==3) {
-			comprarAlgo();
-		}
+		System.out.println();
+		Menu();
 	}
 	
 	public void inventario() {
-		int i = 0;
 		salir = true;
 		System.out.println();
 		System.out.println("--------------------------");
@@ -632,36 +534,11 @@ public void comprarAlgo() {
 		if(n23>0) {
 			System.out.println("23. Huawei enjoy 10: "+n23);
 		}
+		System.out.println("El dinero que posee actualmente es: $" + dinero);
+		System.out.println("Las ganancias obtenidas por el momento son: $" + ganado);
 		System.out.println();
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Seguir comprando");
-				System.out.println("2. Depositar");
-				System.out.println("3. Vender");
-				System.out.print("Respuesta: ");
-				i = lector.nextInt();
-				if (i <= 0 || i > 3) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch (InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(i==1) {
-			comprarAlgo();
-		}
-		else if(i==2) {
-			depositar();
-		}
-		else if(i==3) {
-			vender();
-		}
+		Menu();
+		System.out.println();
 	}
 	public void vender() {
 		int i = 0, cantidad;
@@ -1263,82 +1140,21 @@ public void comprarAlgo() {
 				System.out.println("Tu dinero total es: $" + dinero);
 			}
 		}
-		int q = 0;
-		salir = true;
 		System.out.println();
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Vender");
-				System.out.println("2. Depositar");
-				System.out.println("3. Comprar celulares");
-				System.out.println("3. Mostrar ganancias");
-				System.out.print("Respuesta: ");
-				q = lector.nextInt();
-				if (q <= 0 || q > 4) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch(InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(q==1) {
-			vender();
-		}
-		else if(q==3) {
-			comprarAlgo();
-		}
-		else if(q==2) {
-			depositar();
-		} else if (q==4) {
-			MostrarGanancias();
-		}
+		Menu();
 	}
 	public void NoCel() {
-		int q = 0;
 		salir = true;
 		System.out.println();
 		System.out.println("No tienes ese celular en el inventario, te recomendamos que veas de nuevo tu inventario");
-		do {
-			try {
-				System.out.println("Qué desea hacer?");
-				System.out.println("1. Vender");
-				System.out.println("2. Depositar");
-				System.out.println("3. Comprar celulares");
-				System.out.println("3. Mostrar ganancias");
-				System.out.print("Respuesta: ");
-				q = lector.nextInt();
-				if (q <= 0 || q > 4) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
-					System.out.println();
-				} else {
-					salir = false;
-				}
-			} catch(InputMismatchException ex) {
-				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
-				System.out.println();
-				lector.next();
-			}
-		} while (salir);
-		if(q==1) {
-			vender();
-		}else if(q==2) {
-			depositar();
-		}else if(q==3) {
-			comprarAlgo();
-		}
-		else if(q==4) {
-			MostrarGanancias();
-		}
+		System.out.println();
+		Menu();
 	}
 	public void MostrarGanancias() {
 		System.out.println();
 		System.out.println("Tienes una ganancia de: $"+ganado);
+		System.out.println();
+		Menu();
 	}
 	public void PrecioVenta() {
 		System.out.print("A cuanto lo quieres vender? $");
@@ -1365,5 +1181,50 @@ public void comprarAlgo() {
 			}
 		} while (salir);
 		return cantidad;
+	}
+	public void Menu() {
+		int q = 0;
+		salir = true;
+		do {
+			try {
+				System.out.println("------------------------");
+				System.out.println("          Menú          ");
+				System.out.println("------------------------");
+				System.out.println("Qué acción desea realizar?");
+				System.out.println("1. Depositar");
+				System.out.println("2. Comprar celulares");
+				System.out.println("3. Ver inventario");
+				System.out.println("4. Vender");
+				System.out.println("5. Mostrar ganancias");
+				System.out.println("6. Salir");
+				System.out.print("Respuesta: ");
+				q = lector.nextInt();
+				if (q <= 0 || q > 6) {
+					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
+					System.out.println();
+				} else {
+					salir = false;
+				}
+			} catch (InputMismatchException ex) {
+				System.out.println("Esta no es una respuesta válida, por favor intente de nuevo");
+				System.out.println();
+				lector.next();
+			}
+		} while (salir);
+		switch (q) {
+		case 1:
+			depositar();
+		case 2:
+			comprarAlgo();
+		case 3:
+			inventario();
+		case 4:
+			vender();
+		case 5:
+			MostrarGanancias();
+		case 6:
+			System.out.println("Gracias por usar la aplicación");
+			break;
+		}
 	}
 }
