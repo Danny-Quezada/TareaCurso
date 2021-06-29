@@ -23,15 +23,15 @@ public class Compra {
 	//Esta varibale sirve para darle un fin a los ciclos de excepciones
 	private boolean salir = true;
 	
-	//El fin de esta variable es de repetir el menú cuantas veces sea necesario, hasta que el usuario desee salir
+	//El fin de esta variable es de repetir el menÃº cuantas veces sea necesario, hasta que el usuario desee salir
 	private boolean salida = true;
 	
 	//Y por ultimo, estas variables son contadores de los celulares que vamos comprando(Depende del modelo)
 	private int n,n2,n3,n4,n5,n6, n7, n8, n9, n10, n11,n12,n13,n14,n15,n16, n17, n18, n19, n20, n21, n22, n23;
-	
-	/*Se agrego un método constructor de la clase, para que se le muestre al usuario al iniciar el programa
-	 * Se agrego un método donde se contiene el menú deopciones para que el usuario no este limitado a realizar algunas opciones
-	 * Y un cambio menor en el inventario, ,en donde se muestra también el dinero que posee y las ganancias obtenidas
+
+	/*Se agrego un metodo constructor de la clase, para que se le muestre al usuario al iniciar el programa
+	 * Se agrego un metodo donde se contiene el menu de opciones para que el usuario no este limitado a realizar algunas opciones
+	 * Y un cambio menor en el inventario, ,en donde se muestra tambien el dinero que posee y las ganancias obtenidas
 	 * Tenemos que solucionar el error de salida que te comente
 	*/
 	
@@ -48,7 +48,7 @@ public class Compra {
 	public void PedirDinero() {
 		do {
 			try {
-				System.out.print("Cuanto dinero tienes? $"); 
+				System.out.print("Cuánto dinero tienes? $"); 
 				dinero=lector.nextDouble();
 				if (dinero < 0) {
 					System.out.println("Cantidad de dinero incorrecta, el dinero debe de ser mayor a 0");
@@ -344,7 +344,7 @@ public void comprarAlgo() {
 		System.out.println();
 		do {
 			try {
-				System.out.print("Cuanto celulares vas a comprar? ");
+				System.out.print("Cuántos celulares vas a comprar? ");
 				i=lector.nextInt();
 				if (i < 0) {
 					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
@@ -618,7 +618,7 @@ public void comprarAlgo() {
 		System.out.println();
 		do {
 			try {
-				System.out.println("Que quieres vender? (Debe de introducir el número que le corresponde a cada articulo)");
+				System.out.println("Qué quieres vender? (Debe de introducir el número que le corresponde a cada articulo)");
 				System.out.print("Respuesta: ");
 				i=lector.nextInt();
 				if (i <= 0 || i > 23) {
@@ -1193,7 +1193,7 @@ public void comprarAlgo() {
 				System.out.print("Respuesta: ");
 				q = lector.nextInt();
 				if (q <= 0 || q > 6) {
-					System.out.println("Respuesta incorrecta, seleccione el número que corresponde al celular que desea");
+					System.out.println("Respuesta incorrecta, seleccione el número que corresponde a la opción que desea");
 					System.out.println();
 				} else {
 					salir = false;
