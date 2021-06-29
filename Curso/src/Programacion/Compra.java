@@ -23,14 +23,21 @@ public class Compra {
 	//Esta varibale sirve para darle un fin a los ciclos de excepciones
 	private boolean salir = true;
 	
+	//El fin de esta variable es de repetir el menú cuantas veces sea necesario, hasta que el usuario desee salir
+	private boolean salida = true;
+	
 	//Y por ultimo, estas variables son contadores de los celulares que vamos comprando(Depende del modelo)
 	private int n,n2,n3,n4,n5,n6, n7, n8, n9, n10, n11,n12,n13,n14,n15,n16, n17, n18, n19, n20, n21, n22, n23;
 	
 	/*Se agrego un método constructor de la clase, para que se le muestre al usuario al iniciar el programa
 	 * Se agrego un método donde se contiene el menú deopciones para que el usuario no este limitado a realizar algunas opciones
-	 * Y un cambio menor en el inventario, en donde se muestra también el dinero que posee y las ganancias obtenidas
+	 * Y un cambio menor en el inventario, ,en donde se muestra también el dinero que posee y las ganancias obtenidas
 	 * Tenemos que solucionar el error de salida que te comente
 	*/
+	
+	/*Se soluciono el error de salida, con ayuda de la variable "salida"
+	 *Y se agregaron break por cada opción del switch, para asi poder retornar al menú, para poder repetirse cuantas veces sea necesario
+	 */
 	public Compra(){
 		System.out.println("--------------------------------");
 		System.out.println("    Bienvenido a nuestra app    ");
@@ -56,11 +63,12 @@ public class Compra {
 			}
 		} while (salir);
 		salir = true;
-		System.out.println();
-		Menu();
+		while (salida) {
+			System.out.println();
+			Menu();
+		}
 	}
 public void comprarAlgo() {
-		
 		int i = 0;
 		salir = true;
 		System.out.println();
@@ -420,8 +428,6 @@ public void comprarAlgo() {
 		else if(precio>dinero ) {
 			NotienesusficienteDinero();
 		}
-		System.out.println();
-		Menu();
 	}
 	public void depositar() {
 		double i = 0;
@@ -446,8 +452,6 @@ public void comprarAlgo() {
 		salir = true;
 		dinero=i+dinero;
 		System.out.println("Tienes de dinero $"+dinero);
-		System.out.println();
-		Menu();
 	}
 
 	public void NotienesusficienteDinero() {
@@ -455,8 +459,6 @@ public void comprarAlgo() {
 		System.out.println();
 		System.out.println("Lo siento, sobrepasaste tu dinero");
 		System.out.println("Tienes de dinero: $"+dinero);
-		System.out.println();
-		Menu();
 	}
 	
 	public void inventario() {
@@ -536,9 +538,6 @@ public void comprarAlgo() {
 		}
 		System.out.println("El dinero que posee actualmente es: $" + dinero);
 		System.out.println("Las ganancias obtenidas por el momento son: $" + ganado);
-		System.out.println();
-		Menu();
-		System.out.println();
 	}
 	public void vender() {
 		int i = 0, cantidad;
@@ -1140,21 +1139,15 @@ public void comprarAlgo() {
 				System.out.println("Tu dinero total es: $" + dinero);
 			}
 		}
-		System.out.println();
-		Menu();
 	}
 	public void NoCel() {
 		salir = true;
 		System.out.println();
 		System.out.println("No tienes ese celular en el inventario, te recomendamos que veas de nuevo tu inventario");
-		System.out.println();
-		Menu();
 	}
 	public void MostrarGanancias() {
 		System.out.println();
 		System.out.println("Tienes una ganancia de: $"+ganado);
-		System.out.println();
-		Menu();
 	}
 	public void PrecioVenta() {
 		System.out.print("A cuanto lo quieres vender? $");
@@ -1214,15 +1207,21 @@ public void comprarAlgo() {
 		switch (q) {
 		case 1:
 			depositar();
+			break;
 		case 2:
 			comprarAlgo();
+			break;
 		case 3:
 			inventario();
+			break;
 		case 4:
 			vender();
+			break;
 		case 5:
 			MostrarGanancias();
+			break;
 		case 6:
+			salida = false;
 			System.out.println("Gracias por usar la aplicación");
 			break;
 		}
