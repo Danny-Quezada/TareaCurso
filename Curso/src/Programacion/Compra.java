@@ -35,7 +35,7 @@ public class Compra {
 	 * Tenemos que solucionar el error de salida que te comente
 	*/
 	
-	/*Se soluciono el error de salida, con ayuda de la variable "salida"
+	/*Se soluciono el error de salida, con ayuda de la variable "salida" de tipo boolean
 	 *Y se agregaron break por cada opción del switch, para asi poder retornar al menú, para poder repetirse cuantas veces sea necesario
 	 */
 	public Compra(){
