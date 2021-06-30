@@ -1,5 +1,7 @@
 package Programacion;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,6 +11,7 @@ public class Compra {
 	private double precio;
 	private double PrecioVenta;
 	private double dinero;
+	
 	//Estas son las variables que sirven para determinar cual celular quiere comprar(depende de la marca)
 	private int q;
 	private int r;
@@ -37,6 +40,13 @@ public class Compra {
 	
 	/*Se soluciono el error de salida, con ayuda de la variable "salida" de tipo boolean
 	 *Y se agregaron break por cada opción del switch, para asi poder retornar al menú, para poder repetirse cuantas veces sea necesario
+	 */
+	
+	/*Se han creado 2 nuevos metodos: crearArchivo e imprimir
+	 * La funcionalidad de crearArchivo es el de crear un arcivo txt donde se guarda la info
+	 * El metodo imrpimir lo que hace es escribir dentro del archivo txt el inventario, el dinero qe tenia y sus ganancias
+	 * y en el switch del menu, en la opcion 6 se agrego estos metodos, para que se guarden las ultimos cambios qye hizo en su inventario
+	 * Y por ultimos en la linea 1241 se realiza un objeto de la clase File, que es el que manipulamos para poder los metodos anteriormente comentados
 	 */
 	public Compra(){
 		System.out.println("--------------------------------");
@@ -1221,9 +1231,133 @@ public void comprarAlgo() {
 			MostrarGanancias();
 			break;
 		case 6:
+			crearArchivo();
+			imprimir(n, n2, n3, n4, n5, n6, n7, n8, n9, n10, n11, n12, n13, n14, n15, n16, n17, n18, n19, n20, n21, n22, n23, dinero, ganado);
 			salida = false;
 			System.out.println("Gracias por usar la aplicación");
 			break;
+		}
+	}
+	File fichero = new File("archivo.txt");
+	
+	public void crearArchivo() {
+		try {
+			if (fichero.exists()) {
+				System.out.println("Ya existia el archivo en donde se guardan los datos");
+			} else {
+				fichero.createNewFile();
+				System.out.println("Se ha creado el archivo donde se ha guardado los datos");
+			}
+		} catch (Exception ex) {
+			System.out.println(ex);
+		}
+	}
+	
+	public void  imprimir(int n, int n2, int n3, int n4, int n5, int n6, int n7, int n8, int n9, int n10, int n11, int n12, int n13, int n14, int n15, int n16, int n17, int n18, int n19, int n20, int n21, int n22, int n23, double dinero, double ganado) {
+		this.n = n;
+		this.n2 = n2;
+		this.n3 = n3;
+		this.n4 = n4;
+		this.n5 = n5;
+		this.n6 = n6;
+		this.n7 = n7;
+		this.n8 = n8;
+		this.n9 = n9;
+		this.n10 = n10;
+		this.n11 = n11;
+		this.n12 = n12;
+		this.n13 = n13;
+		this.n14 = n14;
+		this.n15 = n15;
+		this.n16 = n16;
+		this.n17 = n17;
+		this.n18 = n18;
+		this.n19 = n19;
+		this.n20 = n20;
+		this.n21 = n21;
+		this.n22 = n22;
+		this.n23 = n23;
+		this.dinero = dinero;
+		this.ganado = ganado;
+		try {
+			FileWriter escribir = new FileWriter(fichero);
+			escribir.write("--------------------------\n");
+			escribir.write("        Inventario        \n");
+			escribir.write("--------------------------\n");
+			if(n>0) {
+				escribir.write("1. Samsung Galaxy 21S: " + n + "\n");
+			}
+			if(n2>0) {
+				escribir.write("2. Samsung Galaxy S20: " + n2 + "\n");
+			}
+			if(n3>0) {
+				escribir.write("3. Samsung Galaxy Fold: " + n3 + "\n");
+			}
+			if(n4>0) {
+				escribir.write("4. Samsung Galaxy Fold 2: " + n4 + "\n");
+			}
+			if(n5>0) {
+				escribir.write("5. Samsung s10: " + n5 + "\n");
+			}
+			if(n6>0) {
+				escribir.write("6. Samsung s9 plus: " + n6 + "\n");
+			}
+			if(n7>0) {
+				escribir.write("7. iPhone 12 pro max: " + n7 + "\n");
+			}
+			if(n8>0) {
+				escribir.write("8. iphone 11 pro: " + n8 + "\n");
+			}
+			if(n9>0) {
+				escribir.write("9. iphone 8 plus: " + n9 + "\n");
+			}
+			if(n10>0) {
+				escribir.write("10. Iphone 7 plus: " + n10 + "\n");
+			}
+			if(n11>0) {
+				escribir.write("11. Iphone 6 plus: " + n11 + "\n");
+			}
+			if(n12>0) {
+				escribir.write("12. LG V60: " + n12 + "\n");
+			}
+			if(n13>0) {
+				escribir.write("13. LG V50: " + n13 + "\n");
+			}
+			if(n14>0) {
+				escribir.write("14. LG V40: " + n14 + "\n");
+			}
+			if(n15>0) {
+				escribir.write("15. LG G8: " + n15 + "\n");
+			}
+			if(n16>0) {
+				escribir.write("16. LG G7: " + n16 + "\n");
+			}
+			if(n17>0) {
+				escribir.write("17. LG G6: " + n17 + "\n");
+			}
+			if(n18>0) {
+				escribir.write("18. Huawei nova 5: " + n18 + "\n");
+			}
+			if(n19>0) {
+				escribir.write("19. Huawei Mate 30 pro: " + n19 + "\n");
+			}
+			if(n20>0) {
+				escribir.write("20. Huawei Mate 30: " + n20 + "\n");
+			}
+			if(n21>0) {
+				escribir.write("21. Huawei Y9: " + n21 + "\n");
+			}
+			if(n22>0) {
+				escribir.write("22. Huawei P20: " + n22 + "\n");
+			}
+			if(n23>0) {
+				escribir.write("23. Huawei enjoy 10: " + n23 + "\n");
+			}
+			escribir.write("El dinero que posee actualmente es: $" + dinero + "\n");
+			escribir.write("Las ganancias obtenidas por el momento son: $" + ganado  + "\n");
+			escribir.close();
+		} catch (Exception ex) {
+			System.out.println(ex);
 		}
 	}
 }
